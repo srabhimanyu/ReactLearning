@@ -1,10 +1,16 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.js";
+// Import the React and ReactDOM libraries 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+// 2) Get a reference to the div with ID root
+const el= document.getElementById('root');
+
+// Tell React to take control of that element
+const root = ReactDOM.createRoot(el);
+
+// create an component
+function App(){
+return <h1>Hi there!</h1>
+}
+
+root.render(<App/>);
